@@ -14,6 +14,102 @@
  *= require_self
  */
 
- h1 {
-     color: blue;
- }
+ body {
+    background-color: smokewhite;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #0084AF;
+    color: white;
+    padding: 0 15%;
+}
+
+.header-title {
+    margin: 0px;
+    padding: 10px 0;
+}
+
+main {
+    padding: 0 15%;
+}
+
+.order-container {
+    box-shadow: 3px 3px 10px #8c8c8e;
+    border-radius: 4px;
+    background-color: white;
+    margin: 5px;
+}
+
+.order-title-container {
+    background-color: #0084AF;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: white;
+    padding: 0 5px;
+}
+
+.order-title {
+    padding: 5px 0 5px 0;
+    margin: 0;
+}
+
+.order-details-container {
+    color: #404041;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.order-item-name {
+    float: left;
+}
+
+.order-item-functions {
+    float: right;
+}
+
+.order-status {
+    font-weight: bold;
+    color: #02b7e2;
+}
+
+.order-status-change:hover, .order-download-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.order-line-break {
+    font-weight: 500;
+}
+
+main {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #0084AF;
+    text-align: center;
+    position: fixed;
+    height: 25px;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width:768px) {
+    .order-item-name {
+        width: 100%;
+        text-align: center;
+    }
+
+    .order-item-functions {
+        width: 100%;
+        float: left;
+        text-align: center;
+    }
+   
+}
+
+@media (max-width:640px) {
+
+}
