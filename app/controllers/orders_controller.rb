@@ -1,23 +1,30 @@
 class OrdersController < ApplicationController
     def index
     end
-  end
+  
 
   def request_api(url)
     response = Excon.get(
       url,
       headers: {
-        'x-auth-token' => 'PtaLEEuLVByvLmYA21xb'
+        'x-api-token' =>  ENV["realhub_api_token"]
       }
     )
-    return nil if response.status != 200
-    JSON.parse(response.body)
+      
+    @orders = (response.body)
+
+    respond_to do |format|
+      format.json { render json: @orders }
+    end
   end
+  
   def find_orders
     request_api(
-      "https://www.realhubapp.com/api/v2/orders.json"
+      "https://app.realhublive.com/api/v2/orders.json"
     )
+    puts "Called find orders!"
   end
+end
 
   
 

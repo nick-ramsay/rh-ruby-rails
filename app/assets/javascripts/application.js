@@ -1,3 +1,13 @@
+//= require jquery
+
 function testFunction() {
-    console.log("Document loaded!");
+  var testData;
+  $.ajax({
+    url: "/orders",
+    type: "get",
+    dataType: "json",
+    success: function (data) { testData = data }
+  }).then(function () {
+    console.log(testData);
+  })
 }
