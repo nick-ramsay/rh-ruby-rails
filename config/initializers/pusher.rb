@@ -1,1 +1,1 @@
-Pusher.realhub_api_token = ENV["realhub_api_token"]
+REALHUB_API_TOKEN = ENV["realhub_api_token"]
