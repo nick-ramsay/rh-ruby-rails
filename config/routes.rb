@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get '/orders' => 'orders#find_orders'
   get '/agencies' => 'orders#find_agencies'
   get '/campaigns' => 'orders#find_campaigns'
+  get '/campaign' => 'orders#find_campaign'
+  get '/order-items' => 'orders#find_orders'
 end

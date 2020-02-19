@@ -24,6 +24,13 @@ class OrdersController < ApplicationController
     puts "Called find orders!"
   end
 
+  def find_order_items
+    request_api(
+      "https://app.realhublive.com/api/v2/order-items.json"
+    )
+    puts "Called find order items!"
+  end
+
   def find_agencies
     request_api(
       "https://app.realhublive.com/api/v2/agencies.json"
@@ -35,6 +42,14 @@ class OrdersController < ApplicationController
       "https://app.realhublive.com/api/v2/campaigns.json"
     )
     puts "Called find campaigns!"
+  end
+  def find_campaign
+    campaign_id = params[:campaign_id] 
+    puts params[:campaign_id]
+    request_api(
+      "https://app.realhublive.com/api/v2/campaigns/" + campaign_id +".json"
+    )
+    puts "Called find campaign!"
   end
 end
 
