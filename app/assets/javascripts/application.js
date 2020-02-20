@@ -1,6 +1,19 @@
 //= require jquery
 
 var orderData = [];
+var orderStatuses = [];
+
+/*function fetchStatuses() {
+  $.ajax({
+    url: "/statuses",
+    type: "get",
+    dataType: "json",
+    success: function (data) {
+      console.log(data),
+      orderStatuses = data
+    }
+  });
+}*/
 
 function fetchOrders() {
   $.ajax({
@@ -28,7 +41,7 @@ function renderCards() {
         $(orderLineDiv).css("border-top", "1px dashed #d8d9d9");
       }
       var orderItemNameDiv = '<span class="order-item-name"><span>' + orderData[i].items[j].title +'</span>';
-      var orderItemFunctionDiv = '<div class="order-item-functions" id="order-item-functions' + i + '"><span class="order-download-link">Download Artwork</span><span class="order-line-break"> | </span><span class="order-status-change">Change Status</span><span class="order-line-break"> | </span><span class="order-status">Current Order Status</span></div>';
+      var orderItemFunctionDiv = '<div class="order-item-functions" id="order-item-functions' + i + '">' + ((orderData[i].items[j].artwork && orderData[i].items[j].status.title !== "Pending") ? '<a href="'+ orderData[i].items[j].artwork.links.download_url +'" class="order-download-link">Download Artwork</a><span class="order-line-break"> | </span>':"") + '<span class="order-status-change">Change Status</span><span class="order-line-break"> | </span><span class="order-status">' + orderData[i].items[j].status.title +'</span></div>';
       
       $(orderLineDiv).append(orderItemNameDiv);
       $(orderLineDiv).append(orderItemFunctionDiv);
@@ -40,5 +53,6 @@ function renderCards() {
 
 function generateOrdersPage() {
   console.log("Called generate orders page!");
+  //fetchStatuses();
   fetchOrders();
 }

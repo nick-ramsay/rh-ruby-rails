@@ -105,6 +105,11 @@ main {
     color: #02b7e2;
 }
 
+.order-status-change, .order-download-link {
+    color: #404041;
+    text-decoration: none;
+}
+
 .order-status-change:hover, .order-download-link:hover {
     cursor: pointer;
     text-decoration: underline;
