@@ -14,16 +14,41 @@
  *= require_self
  */
 
+ /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
  body {
     background-color: smokewhite;
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
 }
 
+.loader {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #0084AF;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  } /*Note: credit to W3 Schools for loader spinner logic: https://www.w3schools.com/howto/howto_css_loader.asp*/
+
 header {
     background-color: #0084AF;
     color: white;
     padding: 0 15%;
+    margin-bottom: 8px;
 }
 
 .header-title {
@@ -39,7 +64,7 @@ main {
     box-shadow: 3px 3px 10px #8c8c8e;
     border-radius: 4px;
     background-color: white;
-    margin: 5px;
+    margin-bottom: 8px;
 }
 
 .order-title-container {
@@ -59,6 +84,12 @@ main {
     color: #404041;
     padding: 5px;
     overflow: hidden;
+}
+
+.order-item-line {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 2px;
 }
 
 .order-item-name {
@@ -97,6 +128,11 @@ footer {
 }
 
 @media (max-width:768px) {
+
+    .order-title-container {
+        font-size: 10px;
+    }
+
     .order-item-name {
         width: 100%;
         text-align: center;
@@ -111,5 +147,8 @@ footer {
 }
 
 @media (max-width:640px) {
+    h5 {
+        font-size: 10px;
+    }
 
 }
