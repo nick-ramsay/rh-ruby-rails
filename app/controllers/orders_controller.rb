@@ -23,14 +23,13 @@ class OrdersController < ApplicationController
     puts "Called find orders!"
   end
 
-=begin
+
   def find_statuses
     request_api(
-      "https://www.realhubapp.com/api/v2/statuses.json"
+      "https://app.realhublive.com/api/v2/statuses.json"
     )
     puts "Called find statuses!"
   end
-=end
 end
 
   

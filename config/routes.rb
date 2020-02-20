@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root to: 'orders#index'
   
   get '/orders' => 'orders#find_orders'
-  #get '/statuses' => 'orders#find_statuses'
+  get '/statuses' => 'orders#find_statuses'
 end
