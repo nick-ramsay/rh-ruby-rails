@@ -45,7 +45,7 @@
   } /*Note: credit to W3 Schools for loader spinner logic: https://www.w3schools.com/howto/howto_css_loader.asp*/
 
 header {
-    background-color: #0084AF;
+    background-color: #00517C;
     color: white;
     padding: 0 15%;
     margin-bottom: 8px;
@@ -124,7 +124,7 @@ main {
 }
 
 footer {
-    background-color: #0084AF;
+    background-color: #00517C;
     text-align: center;
     position: fixed;
     height: 25px;
