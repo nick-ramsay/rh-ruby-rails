@@ -10,7 +10,7 @@ gem 'excon'
 #ENV functionality to protect API key...
 gem 'dotenv-rails', groups: [:development, :test]
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 #Figaro for securing API keys...
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'pusher'
